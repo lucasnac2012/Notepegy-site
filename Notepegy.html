@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Notepegy</title>
+
+<style>
+body {
+  font-family: Consolas, monospace;
+  background: #111;
+  color: #ddd;
+  margin: 0;
+}
+
+header {
+  background: #000;
+  padding: 15px;
+  border-bottom: 2px solid #333;
+}
+
+h1 {
+  margin: 0;
+  color: #22c55e;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav button {
+  background: #222;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 8px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #333;
+}
+
+.container {
+  padding: 20px;
+}
+
+.tab {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.card {
+  border: 1px solid #333;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #181818;
+}
+
+.btn {
+  display: inline-block;
+  background: #22c55e;
+  color: black;
+  padding: 8px 15px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.warning {
+  color: #facc15;
+}
+</style>
+
+<script>
+function openTab(tabName) {
+  let tabs = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+  document.getElementById(tabName).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Notepegy</h1>
+  <div>editor de arquivos .peg e .txt</div>
+
+  <nav>
+    <button onclick="openTab('downloads')">Downloads</button>
+    <button onclick="openTab('sobre')">Sobre</button>
+    <button onclick="openTab('changelog')">Changelog</button>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- DOWNLOADS -->
+  <div id="downloads" class="tab active">
+
+    <div class="card">
+      <h2>v2.2 (latest)</h2>
+      <p>✔ Drag and drop<br>
+         ✔ Busca em arquivos<br>
+         ✔ Navegação entre pastas</p>
+
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2/Notepegy_setup_2.2.exe">
+        baixar.exe
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>versões antigas</h3>
+
+      <p>v2.1.1 - correções</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1.1/Notepegy_setup_2.1.1.exe">baixar</a>
+
+      <p class="warning">v2.1 - bugado (não recomendado)</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1/Notepegy_setup_2.1.exe">baixar</a>
+
+      <p>v2.0</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.0/Notepegy_setup_2.0.exe">baixar</a>
+
+      <p>v1.9</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.9/Notepegy_setup_1.9.exe">baixar</a>
+
+      <p>v1.8</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.8/Notepegy_setup_1.8.exe">baixar</a>
+
+      <p>v1.7 (primeiro release)</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.7/Notepegy_setup_1.7.exe">baixar</a>
+    </div>
+
+  </div>
+
+  <!-- SOBRE -->
+  <div id="sobre" class="tab">
+    <div class="card">
+      <h2>sobre o notepegy</h2>
+
+      <p>
+      Notepegy é um editor de arquivos focado em simplicidade e controle direto sobre arquivos .peg e .txt.
+      </p>
+
+      <p>
+      Criado com foco em:
+      </p>
+
+      <ul>
+        <li>leveza</li>
+        <li>controle de arquivos</li>
+        <li>navegação por pastas</li>
+        <li>edição rápida</li>
+      </ul>
+
+      <p>
+      Desenvolvido por lucasnac2012
+      </p>
+    </div>
+  </div>
+
+  <!-- CHANGELOG -->
+  <div id="changelog" class="tab">
+    <div class="card">
+      <h2>changelog</h2>
+
+      <p><b>v2.2</b><br>
+      drag and drop, melhorias gerais</p>
+
+      <p><b>v2.1.1</b><br>
+      correção de bugs</p>
+
+      <p><b>v2.1</b><br>
+      versão bugada</p>
+
+      <p><b>v2.0</b><br>
+      busca, status inteligente, datas, tamanho</p>
+
+      <p><b>v1.7</b><br>
+      primeiro release público</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
