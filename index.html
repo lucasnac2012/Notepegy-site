@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Notepegy</title>
 
+<!-- FAVICON -->
+<link rel="icon" href="Notepegy.ico" type="image/x-icon">
+
 <style>
 body {
   font-family: Consolas, monospace;
@@ -12,10 +15,22 @@ body {
   margin: 0;
 }
 
+/* HEADER */
 header {
   background: #e8dcc7;
   padding: 15px;
   border-bottom: 2px solid #c2b59b;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-area img {
+  width: 40px;
+  height: 40px;
 }
 
 h1 {
@@ -24,10 +39,12 @@ h1 {
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.7;
+  margin-left: 50px;
 }
 
+/* NAV */
 nav {
   margin-top: 10px;
 }
@@ -45,12 +62,14 @@ nav button:hover {
   background: #cbb891;
 }
 
+/* CONTAINER */
 .container {
   padding: 20px;
   max-width: 900px;
   margin: auto;
 }
 
+/* TABS */
 .tab {
   display: none;
 }
@@ -59,6 +78,7 @@ nav button:hover {
   display: block;
 }
 
+/* CARDS */
 .card {
   border: 1px solid #c2b59b;
   padding: 15px;
@@ -70,6 +90,7 @@ nav button:hover {
   border: 2px solid #8b6f3d;
 }
 
+/* BOTÃO */
 .btn {
   display: inline-block;
   background: #8b6f3d;
@@ -109,7 +130,13 @@ function openTab(tabName) {
 <body>
 
 <header>
-  <h1>Notepegy</h1>
+
+  <!-- LOGO + NOME -->
+  <div class="logo-area">
+    <img src="Notepegy.ico">
+    <h1>Notepegy</h1>
+  </div>
+
   <div class="subtitle">editor de arquivos .peg e .txt</div>
 
   <nav>
@@ -130,7 +157,7 @@ function openTab(tabName) {
 
       <p>
         ✔ Correções de bugs<br>
-        ✔ Melhorias de estabilidade
+        ✔ Melhorias de estabilidade<br>
         ✔ Mudança de interface
       </p>
 
@@ -176,20 +203,14 @@ function openTab(tabName) {
         Notepegy é um editor leve focado em controle direto de arquivos.
       </p>
 
-      <p>
-        Recursos principais:
-      </p>
-
       <ul>
         <li>edição de arquivos .peg e .txt</li>
         <li>navegação por pastas</li>
         <li>busca em arquivos</li>
-        <li>interface simples e direta</li>
+        <li>interface simples</li>
       </ul>
 
-      <p>
-        desenvolvido por lucasnac2012
-      </p>
+      <p>desenvolvido por lucasnac2012</p>
     </div>
   </div>
 
@@ -199,7 +220,7 @@ function openTab(tabName) {
       <h2>changelog</h2>
 
       <p><b>2.2.1</b><br>correções e melhorias</p>
-      <p><b>2.2</b><br>drag and drop, melhorias</p>
+      <p><b>2.2</b><br>drag and drop</p>
       <p><b>2.1.1</b><br>correções</p>
       <p><b>2.1</b><br>bugado</p>
       <p><b>2.0</b><br>grande atualização</p>
