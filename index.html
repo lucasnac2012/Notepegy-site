@@ -7,7 +7,7 @@
 <style>
 body {
   font-family: Consolas, monospace;
-  background: #f5f0e6; /* bege claro */
+  background: #f5f0e6;
   color: #2b2b2b;
   margin: 0;
 }
@@ -20,7 +20,12 @@ header {
 
 h1 {
   margin: 0;
-  color: #5a4a2f; /* marrom */
+  color: #5a4a2f;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 nav {
@@ -42,6 +47,8 @@ nav button:hover {
 
 .container {
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .tab {
@@ -59,13 +66,18 @@ nav button:hover {
   background: #efe6d6;
 }
 
+.highlight {
+  border: 2px solid #8b6f3d;
+}
+
 .btn {
   display: inline-block;
   background: #8b6f3d;
   color: white;
-  padding: 8px 15px;
+  padding: 10px 18px;
   text-decoration: none;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -74,6 +86,11 @@ nav button:hover {
 
 .warning {
   color: #b45309;
+}
+
+.version {
+  font-size: 13px;
+  opacity: 0.7;
 }
 </style>
 
@@ -93,7 +110,7 @@ function openTab(tabName) {
 
 <header>
   <h1>Notepegy</h1>
-  <div>editor de arquivos .peg e .txt</div>
+  <div class="subtitle">editor de arquivos .peg e .txt</div>
 
   <nav>
     <button onclick="openTab('downloads')">Downloads</button>
@@ -107,37 +124,44 @@ function openTab(tabName) {
   <!-- DOWNLOADS -->
   <div id="downloads" class="tab active">
 
-    <div class="card">
-      <h2>v2.2 (latest)</h2>
-      <p>✔ Drag and drop<br>
-         ✔ Busca em arquivos<br>
-         ✔ Navegação entre pastas</p>
+    <div class="card highlight">
+      <h2>Notepegy 2.2.1</h2>
+      <div class="version">última versão (recomendado)</div>
 
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2/Notepegy_setup_2.2.exe">
-        baixar.exe
+      <p>
+        ✔ Correções de bugs<br>
+        ✔ Melhorias de estabilidade
+      </p>
+
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2.1/Notepegy_setup_2.2.1.exe">
+        baixar última versão
       </a>
     </div>
 
     <div class="card">
-      <h3>versões antigas</h3>
+      <h3>outras versões</h3>
 
-      <p>v2.1.1 - correções</p>
+      <p>2.2</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2/Notepegy_setup_2.2.exe">baixar</a>
+
+      <p>2.1.1 - correções</p>
       <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1.1/Notepegy_setup_2.1.1.exe">baixar</a>
 
-      <p class="warning">v2.1 - bugado (não recomendado)</p>
+      <p class="warning">2.1 - não recomendado</p>
       <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1/Notepegy_setup_2.1.exe">baixar</a>
 
-      <p>v2.0</p>
+      <p>2.0</p>
       <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.0/Notepegy_setup_2.0.exe">baixar</a>
 
-      <p>v1.9</p>
+      <p>1.9</p>
       <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.9/Notepegy_setup_1.9.exe">baixar</a>
 
-      <p>v1.8</p>
+      <p>1.8</p>
       <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.8/Notepegy_setup_1.8.exe">baixar</a>
 
-      <p>v1.7 (primeiro release)</p>
+      <p>1.7</p>
       <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.7/Notepegy_setup_1.7.exe">baixar</a>
+
     </div>
 
   </div>
@@ -145,25 +169,25 @@ function openTab(tabName) {
   <!-- SOBRE -->
   <div id="sobre" class="tab">
     <div class="card">
-      <h2>sobre o notepegy</h2>
+      <h2>sobre</h2>
 
       <p>
-      Notepegy é um editor de arquivos focado em simplicidade e controle direto sobre arquivos .peg e .txt.
+        Notepegy é um editor leve focado em controle direto de arquivos.
       </p>
 
       <p>
-      Criado com foco em:
+        Recursos principais:
       </p>
 
       <ul>
-        <li>leveza</li>
-        <li>controle de arquivos</li>
+        <li>edição de arquivos .peg e .txt</li>
         <li>navegação por pastas</li>
-        <li>edição rápida</li>
+        <li>busca em arquivos</li>
+        <li>interface simples e direta</li>
       </ul>
 
       <p>
-      Desenvolvido por lucasnac2012
+        desenvolvido por lucasnac2012
       </p>
     </div>
   </div>
@@ -173,20 +197,13 @@ function openTab(tabName) {
     <div class="card">
       <h2>changelog</h2>
 
-      <p><b>v2.2</b><br>
-      drag and drop, melhorias gerais</p>
+      <p><b>2.2.1</b><br>correções e melhorias</p>
+      <p><b>2.2</b><br>drag and drop, melhorias</p>
+      <p><b>2.1.1</b><br>correções</p>
+      <p><b>2.1</b><br>bugado</p>
+      <p><b>2.0</b><br>grande atualização</p>
+      <p><b>1.7</b><br>primeiro release</p>
 
-      <p><b>v2.1.1</b><br>
-      correção de bugs</p>
-
-      <p><b>v2.1</b><br>
-      versão bugada</p>
-
-      <p><b>v2.0</b><br>
-      busca, status inteligente, datas, tamanho</p>
-
-      <p><b>v1.7</b><br>
-      primeiro release público</p>
     </div>
   </div>
 
