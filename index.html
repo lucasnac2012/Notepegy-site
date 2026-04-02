@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Notepegy</title>
+<title>Notepegy 2.3</title>
 
 <!-- FAVICON -->
 <link rel="icon" href="Notepegy.ico" type="image/x-icon">
@@ -140,9 +140,9 @@ function openTab(tabName) {
   <div class="subtitle">editor de arquivos .peg e .txt</div>
 
   <nav>
-    <button onclick="openTab('downloads')">Downloads</button>
-    <button onclick="openTab('sobre')">Sobre</button>
-    <button onclick="openTab('changelog')">Changelog</button>
+    <button onclick="openTab('downloads')" title="Ver downloads do Notepegy">Downloads</button>
+    <button onclick="openTab('sobre')" title="Saiba mais sobre o Notepegy">Sobre</button>
+    <button onclick="openTab('changelog')" title="Ver novidades por versão">Changelog</button>
   </nav>
 </header>
 
@@ -152,16 +152,17 @@ function openTab(tabName) {
   <div id="downloads" class="tab active">
 
     <div class="card highlight">
-      <h2>Notepegy 2.2.1</h2>
+      <h2>Notepegy 2.3</h2>
       <div class="version">última versão (recomendado)</div>
 
       <p>
-        ✔ Correções de bugs<br>
-        ✔ Melhorias de estabilidade<br>
-        ✔ Mudança de interface
+        ✔ Tema escuro/claro (alternar dark mode e light mode)<br>
+        ✔ Função dos botões ao passar o mouse<br>
+        ✔ Busca de texto nos arquivos com Ctrl + F ou botão da lupa<br>
+        ✔ Correções de bugs e melhorias de estabilidade
       </p>
 
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2.1/Notepegy_setup_2.2.1.exe">
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.3/Notepegy_setup_2.3.exe" title="Baixar Notepegy 2.3">
         baixar última versão
       </a>
     </div>
@@ -169,26 +170,29 @@ function openTab(tabName) {
     <div class="card">
       <h3>outras versões</h3>
 
+      <p>2.2.1 - versão anterior</p>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2.1/Notepegy_setup_2.2.1.exe" title="Baixar Notepegy 2.2.1">baixar</a>
+
       <p>2.2</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2/Notepegy_setup_2.2.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.2/Notepegy_setup_2.2.exe" title="Baixar Notepegy 2.2">baixar</a>
 
       <p>2.1.1 - correções</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1.1/Notepegy_setup_2.1.1.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1.1/Notepegy_setup_2.1.1.exe" title="Baixar Notepegy 2.1.1">baixar</a>
 
       <p class="warning">2.1 - não recomendado</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1/Notepegy_setup_2.1.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.1/Notepegy_setup_2.1.exe" title="Baixar Notepegy 2.1">baixar</a>
 
       <p>2.0</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.0/Notepegy_setup_2.0.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v2.0/Notepegy_setup_2.0.exe" title="Baixar Notepegy 2.0">baixar</a>
 
       <p>1.9</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.9/Notepegy_setup_1.9.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.9/Notepegy_setup_1.9.exe" title="Baixar Notepegy 1.9">baixar</a>
 
       <p>1.8</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.8/Notepegy_setup_1.8.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.8/Notepegy_setup_1.8.exe" title="Baixar Notepegy 1.8">baixar</a>
 
       <p>1.7</p>
-      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.7/Notepegy_setup_1.7.exe">baixar</a>
+      <a class="btn" href="https://github.com/lucasnac2012/Notepegy-site/releases/download/v1.7/Notepegy_setup_1.7.exe" title="Baixar Notepegy 1.7">baixar</a>
 
     </div>
 
@@ -208,7 +212,12 @@ function openTab(tabName) {
         <li>navegação por pastas</li>
         <li>busca em arquivos</li>
         <li>interface simples</li>
+        <li>tema escuro e claro (alternância)</li>
+        <li>função dos botões ao passar o mouse</li>
+        <li>busca com Ctrl + F ou botão da lupa</li>
       </ul>
+
+      <p><b>atalhos</b><br>Ctrl + F: procurar texto nos arquivos</p>
 
       <p>desenvolvido por lucasnac2012</p>
     </div>
@@ -219,6 +228,7 @@ function openTab(tabName) {
     <div class="card">
       <h2>changelog</h2>
 
+      <p><b>2.3</b><br>tema escuro/claro, função dos botões e busca com Ctrl + F ou lupa</p>
       <p><b>2.2.1</b><br>correções e melhorias</p>
       <p><b>2.2</b><br>drag and drop</p>
       <p><b>2.1.1</b><br>correções</p>
